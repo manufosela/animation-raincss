@@ -3,7 +3,7 @@
   "description": "Webcomponent animation-raincss following open-wc recommendations",
   "license": "MIT",
   "author": "manufosela",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "animation-raincss.js",
   "module": "animation-raincss.js",
   "type": "module",

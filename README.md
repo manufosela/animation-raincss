@@ -15,8 +15,12 @@ npm i animation-raincss
   import 'animation-raincss/animation-raincss.js';
 </script>
 
-<animation-raincss></animation-raincss>
+<animation-raincss nb-drop="800"></animation-raincss>
 ```
+
+## Styling
+
+--animation-raincss-background-color: <color>. Defaults to #0D343A
 
 ## Linting and formatting
 
@@ -59,7 +63,6 @@ To build a production version of Storybook, run
 ```bash
 npm run storybook:build
 ```
-
 
 ## Tooling configs
 
