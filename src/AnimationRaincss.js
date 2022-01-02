@@ -8,8 +8,8 @@ export class AnimationRaincss extends LitElement {
         width: 100vw;
         height: 100vh;
         background: var(--animation-raincss-background-color, #0D343A);
-        background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(#000000)  );
-        background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(0,0,0,1) 100%);
+        background: var(--animation-raincss-background-color, -webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(#000000)  ));
+        background: var(--animation-raincss-background-color, -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(0,0,0,1) 100%));
         overflow: hidden;
         filter: drop-shadow(0 0 10px white);
         z-index:-1;
