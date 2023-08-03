@@ -4,21 +4,30 @@
     <meta charset="utf-8" />
     <style>
       body {
-        background: #fafafa;
+        background: #222;
       }
     </style>
   </head>
   <body>
-    <div id="demo"></div>
+    <div id="demo">
+      <button id="more">more Rain</button>
+      <button id="less">less Rain</button>
+      <animation-raincss nb-drop="200"></animation-raincss>
+    </div>
 
-    <script type="module">
-      import { html, render } from 'lit';
-      import '../animation-raincss.js';
+    <script type="module" src="../animation-raincss.js"></script>
+    <script>
+      document.getElementById('more').addEventListener('click', () => {
+        let newNbDrop = parseInt(document.querySelector('animation-raincss').getAttribute('nb-drop'), 10) + 100;
+        if (newNbDrop > 1000) newNbDrop = 1000;
+        document.querySelector('animation-raincss').setAttribute('nb-drop', newNbDrop);
+      })
 
-      render(
-        html` <animation-raincss nb-drop="800"></animation-raincss> `,
-        document.querySelector('#demo')
-      );
+      document.getElementById('less').addEventListener('click', () => {
+        let newNbDrop = parseInt(document.querySelector('animation-raincss').getAttribute('nb-drop'), 10) - 100;
+        if (newNbDrop < 0) newNbDrop = 0;
+        document.querySelector('animation-raincss').setAttribute('nb-drop', newNbDrop);
+      });
     </script>
   </body>
 </html>
